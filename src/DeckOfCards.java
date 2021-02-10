@@ -23,7 +23,7 @@ public class DeckOfCards {
         {
             for (int i=0;i<faceNames.size();i++)
             {
-                Card card = new Card(faceNames.get(i), suit, i+2);
+                Card card = new Card(faceNames.get(i), suit);
                 System.out.println(card);
                 deck.add(card);
             }

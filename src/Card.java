@@ -5,16 +5,15 @@ import java.util.List;
 public class Card {
     // These are instance variables , private  variables
     private String faceName, suit;
-    private int faceValue;
+
 
     /***
      * The goal of constrcot
      */
-    public Card(String face, String suit, int faceValue)
+    public Card(String face, String suit)
     {
         setFaceName(face);
         setSuit(suit);
-        setFaceValue(faceValue);
     }
 
     public String getFaceName() {
@@ -66,17 +65,7 @@ public class Card {
     }
 
     public int getFaceValue() {
-        return faceValue;
-    }
-
-    /**
-     *
-     * */
-    public void setFaceValue(int faceValue) {
-        if (faceValue>=2 && faceValue<=14)
-            this.faceValue = faceValue;
-        else
-            throw new IllegalArgumentException("face value must be 2-14 inclusive");
+        return getFaceNames().indexOf(faceName) + 2;
     }
 
     public String toString()
